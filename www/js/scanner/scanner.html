@@ -1,0 +1,12 @@
+<ion-view view-title="Scanner module">
+  <ion-content>
+    <button class="button button-full button-positive" ng-click="$ctrl.scan()">
+      <i class="ion-qr-scanner"></i>
+     Scann data
+    </button>
+   
+    Scan Data: {{$ctrl.scannerData}}
+
+    {{$ctrl.scannError}}
+  </ion-content>
+</ion-view>

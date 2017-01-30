@@ -1,0 +1,15 @@
+<ion-view view-title="Scanner module">
+  <ion-content>
+    <button class="button button-full button-positive" ng-click="$ctrl.getLocation()">
+      <i class="ion-qr-scanner"></i>
+     Get Location
+    </button>
+   
+    Geo Data: {{$ctrl.locationData}}
+    <br>
+    {{$ctrl.locationError}}
+    <br>
+    DISTANCE FROM RUSSIA: {{$ctrl.distanceFrom}}
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="Products">
+  <ion-content>
+    <button class="button button-full button-positive" ng-click="$ctrl.newProduct()">
+      <i class="ion-plus-circled"></i>
+      New Product
+    </button>
+    <ion-list>
+      <ion-item ng-repeat="product in $ctrl.products" ng-click="$ctrl.productDetail(product.id)">
+        {{product.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

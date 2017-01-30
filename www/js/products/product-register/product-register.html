@@ -1,0 +1,27 @@
+<ion-view view-title="Product Register">
+  <ion-content>
+
+    <div class="list">      
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Name</span>
+        <input type="text" ng-model="$ctrl.product.name">
+      </label>
+      
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Image</span>
+        <div class="item item-image">
+          <img class="list-img" ng-if=" $ctrl.product && $ctrl.product.img !==undefined " ng-src="{{$ctrl.product.img}}" >
+        </div>
+         <button class="button button-full button-positive" ng-click="$ctrl.takePic()">
+            <i class="ion-camera"></i>
+            Take Picture
+          </button>
+      </label>
+    </div>
+
+    <button class="button button-full button-positive" ng-click="$ctrl.save()">
+      <i class="ion-checkmark"></i>
+      Save
+    </button>
+  </ion-content>
+</ion-view>

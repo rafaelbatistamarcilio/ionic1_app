@@ -1,0 +1,27 @@
+<ion-view view-title="Product Detail">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <!--<img src="#">-->
+        <h2>{{$ctrl.product.name}}</h2>
+        <p>ID: {{$ctrl.product.id}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img ng-src="{{$ctrl.product.img}}">        
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i> Start listening
+      </a>
+
+    </div>
+
+    <button class="button button-full button-positive" ng-click="$ctrl.editProduct()">
+      <i class="ion-edit"></i>
+      Edit
+    </button>
+  </ion-content>
+</ion-view>

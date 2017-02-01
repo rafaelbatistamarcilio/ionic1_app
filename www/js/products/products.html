@@ -5,9 +5,13 @@
       New Product
     </button>
     <ion-list>
-      <ion-item ng-repeat="product in $ctrl.products" ng-click="$ctrl.productDetail(product.id)">
-        {{product.name}}
-      </ion-item>
+      <div class="list" ng-repeat="product in $ctrl.products" ng-click="$ctrl.productDetail(product.id)">
+        
+        <div class="item item-avatar">
+          <img ng-src="{{product.img}}">
+          <p>{{product.name}}</p>
+        </div>
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>

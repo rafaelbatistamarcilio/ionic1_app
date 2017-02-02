@@ -37,9 +37,12 @@
 
         function takePic() {
             var options = {
-                quality: 50,
+                quality: 100,
                 destinationType: Camera.DestinationType.DATA_URL,
-                saveToPhotoAlbum:true
+                saveToPhotoAlbum:true,
+                encodingType: Camera.EncodingType.JPEG,
+                mediaType: Camera.MediaType.PICTURE,
+                correctOrientation: true 
             }
 
             function successFunction(imageData){

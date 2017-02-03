@@ -39,10 +39,14 @@
             var options = {
                 quality: 100,
                 destinationType: Camera.DestinationType.DATA_URL,
-                saveToPhotoAlbum:true,
+                sourceType: Camera.PictureSourceType.CAMERA,
+                allowEdit: true,
                 encodingType: Camera.EncodingType.JPEG,
-                mediaType: Camera.MediaType.PICTURE,
-                correctOrientation: true 
+                targetWidth: 900,
+                targetHeight: 900,
+                popoverOptions: CameraPopoverOptions,
+                saveToPhotoAlbum: false,
+                correctOrientation:true
             }
 
             function successFunction(imageData){
@@ -55,6 +59,7 @@
             }
 
             vm.$cordovaCamera.getPicture(options).then(successFunction,errorFunction);
+
         }    
     }
 })();
